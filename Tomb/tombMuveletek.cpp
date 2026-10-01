@@ -37,7 +37,7 @@ int osszeg(int tomb[], int n)
 int legkissebb(int tomb[], int n)
 {
     int min = tomb[0];
-    for(int i = 0; i < n; i++)
+    for(int i = 1; i < n; i++)
     {
         if(tomb[i] < min)
             min = tomb[i];
@@ -48,7 +48,7 @@ int legkissebb(int tomb[], int n)
 int legnagyobb (int tomb[],int n)
 {
     int max = tomb[0];
-    for(int i = 0; i < n; i++)
+    for(int i = 1; i < n; i++)
     {
         if(tomb[i] > max)
             max = tomb[i];
