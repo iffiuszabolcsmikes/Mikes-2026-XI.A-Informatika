@@ -63,6 +63,17 @@ int elsoSzamjegy(int szam)
     return szam;
 }
 
+int megfordit(int szam)
+{
+    int forditott = 0;
+    while(szam != 0)
+    {
+        forditott = forditott * 10 + szam % 10;
+        szam = szam / 10;
+    }
+    return forditott;
+}
+
 int main()
 {
     int szam;
@@ -73,5 +84,6 @@ int main()
     cout << "legkisebb szamjegy: " << legkisebbSzamjegy(szam) << endl;
     cout << "legnagyobb szamjegy: " << legnagyobbSzamjegy(szam) << endl;
     cout << "elso szamjegy: " << elsoSzamjegy(szam) << endl;
+    cout << "forditott: " << megfordit(szam) << endl;
     return 0;
 }
