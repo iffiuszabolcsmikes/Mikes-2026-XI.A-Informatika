@@ -20,7 +20,7 @@ int osztokOsszege(int szam)
 int main()
 {
     cout << "Baratsagos szamok: " << endl;
-    for (int i=1;i<1000000000;i++)
+    for (int i = 1; i < 1000000000; i++)
     {
         int ossz = osztokOsszege(i);
         if(osztokOsszege(ossz) == i)
