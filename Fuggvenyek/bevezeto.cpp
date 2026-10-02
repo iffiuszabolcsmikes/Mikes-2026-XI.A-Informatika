@@ -30,8 +30,6 @@ float hatvany(int alap, int kitevo)
     return eredmeny;
 }
 
-void 
-
 int main()
 {
     cout << "Fuggvenyek!" << endl;
