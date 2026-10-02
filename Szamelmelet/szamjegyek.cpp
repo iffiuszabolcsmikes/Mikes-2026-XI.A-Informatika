@@ -2,12 +2,13 @@
 
 using namespace std;
 
+//visszateriti a szam szamjegyeinek darabszamat
 int szamjegyekSzama( int szam)
 {
     if(szam == 0)
         return 1;
 
-    int db=0;
+    int db = 0;
     while(szam != 0)
     {
         szam = szam / 10;
@@ -16,10 +17,11 @@ int szamjegyekSzama( int szam)
     return db;
 }
 
+//visszateriti a szam szamjegyeinek osszeget
 int szamjegyekOsszege( int szam)
 {
     int osszeg = 0;
-    while(szam!= 0)
+    while(szam != 0)
     {
         osszeg = osszeg + szam % 10;
         szam = szam / 10;
@@ -27,10 +29,12 @@ int szamjegyekOsszege( int szam)
     return osszeg;
 }
 
+//visszateriti a legkisebb szamjegyet
 int legkisebbSzamjegy(int szam)
 {
     int min = szam % 10;
-    while(szam != 0){
+    while(szam != 0)
+    {
         if(szam % 10 < min)
         {
             min = szam % 10;
@@ -40,9 +44,10 @@ int legkisebbSzamjegy(int szam)
     return min;
 }
 
+//visszateriti a legnagyobb szamjegyet
 int legnagyobbSzamjegy(int szam)
 {
-    int max=szam%10;
+    int max = szam % 10;
     while(szam != 0)
     {
         if(szam % 10 > max)
@@ -54,15 +59,23 @@ int legnagyobbSzamjegy(int szam)
     return max;
 }
 
+//visszateriti egy szam utolso szamjegyet
+int utolsoSzamjegy(int szam)
+{
+    return szam % 10;
+}
+
+//visszateriti az elso szamjegyet
 int elsoSzamjegy(int szam)
 {
     while(szam <-9 || szam >9)
     {
-        szam=szam/10;
+        szam = szam / 10;
     }
     return szam;
 }
 
+//visszateriti a szam fordittottjat (pl.: 123 -> 321)
 int megfordit(int szam)
 {
     int forditott = 0;
