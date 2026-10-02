@@ -4,8 +4,7 @@
 
 using namespace std;
 
-//tomb kapacitas
-const int N = 100;
+const int N = 100; //tomb kapacitas
 
 void feltoltVeletlen(int tomb[], int n)
 {
@@ -27,7 +26,7 @@ void kiir(int tomb[], int n)
 int osszeg(int tomb[], int n)
 {
     int ossz = 0;
-    for(int i  =0; i < n; i++)
+    for(int i = 0; i < n; i++)
     {
         ossz = ossz + tomb[i];
     }
@@ -45,7 +44,7 @@ int legkissebb(int tomb[], int n)
     return min;
 }
 
-int legnagyobb (int tomb[],int n)
+int legnagyobb(int tomb[],int n)
 {
     int max = tomb[0];
     for(int i = 1; i < n; i++)
@@ -60,8 +59,7 @@ int main()
 {
     srand(time(0));
     int tomb[N];
-    //tomb merete
-    int n = 20;
+    int n = 20; //tomb merete
     feltoltVeletlen(tomb, n);
     kiir(tomb, n);
     cout << "Osszeg: " << osszeg(tomb, n) << endl;
