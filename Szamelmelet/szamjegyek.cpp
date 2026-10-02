@@ -29,7 +29,7 @@ int szamjegyekOsszege( int szam)
     return osszeg;
 }
 
-//visszateriti a legkisebb szamjegyet
+//visszateriti a szam legkisebb szamjegyet
 int legkisebbSzamjegy(int szam)
 {
     int min = szam % 10;
@@ -44,7 +44,7 @@ int legkisebbSzamjegy(int szam)
     return min;
 }
 
-//visszateriti a legnagyobb szamjegyet
+//visszateriti a szam legnagyobb szamjegyet
 int legnagyobbSzamjegy(int szam)
 {
     int max = szam % 10;
@@ -59,13 +59,13 @@ int legnagyobbSzamjegy(int szam)
     return max;
 }
 
-//visszateriti egy szam utolso szamjegyet
+//visszateriti a szam utolso szamjegyet
 int utolsoSzamjegy(int szam)
 {
     return szam % 10;
 }
 
-//visszateriti az elso szamjegyet
+//visszateriti a szam elso szamjegyet
 int elsoSzamjegy(int szam)
 {
     while(szam <-9 || szam >9)
@@ -97,6 +97,7 @@ int main()
     cout << "legkisebb szamjegy: " << legkisebbSzamjegy(szam) << endl;
     cout << "legnagyobb szamjegy: " << legnagyobbSzamjegy(szam) << endl;
     cout << "elso szamjegy: " << elsoSzamjegy(szam) << endl;
+    cout << "utolso szamjegy: " << utolsoSzamjegy(szam) << endl;
     cout << "forditott: " << megfordit(szam) << endl;
     return 0;
 }
