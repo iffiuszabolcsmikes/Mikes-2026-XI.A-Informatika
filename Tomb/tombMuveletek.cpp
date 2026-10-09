@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <cstdlib>
 #include <ctime>
+#include <cmath>
 
 using namespace std;
 
@@ -31,7 +32,6 @@ void kiir(int tomb[], int n)
     cout << endl;
 }
 
-
 int osszeg(int tomb[], int n)
 {
     int ossz = 0;
@@ -53,6 +53,17 @@ int legkissebb(int tomb[], int n)
     return min;
 }
 
+int minIndex(int tomb[], int n)
+{
+    int mini = 0;
+    for(int i = 1; i < n; i++)
+    {
+        if(tomb[i] < tomb[mini])
+            mini = i;
+    }
+    return mini;
+}
+
 int legnagyobb(int tomb[],int n)
 {
     int max = tomb[0];
@@ -62,6 +73,17 @@ int legnagyobb(int tomb[],int n)
             max = tomb[i];
     }
     return max;
+}
+
+int maxIndex(int tomb[],int n)
+{
+    int maxi = 0;
+    for(int i = 1; i < n; i++)
+    {
+        if(tomb[i] > tomb[maxi])
+            maxi = i;
+    }
+    return maxi;
 }
 
 bool eleme(int tomb[], int n, int keresettElem)
@@ -159,6 +181,23 @@ int primekSzama(int tomb[], int n)
     return db;
 }
 
+bool teljesNegyzet(int szam)
+{
+    int gyok = sqrt(szam);
+    return gyok*gyok == szam;
+}
+
+int teljesNegyzetOssz(int tomb[], int n)
+{
+    int ossz = 0;
+    for(int i = 0; i < n; i++)
+    {
+        if(teljesNegyzet(tomb[i]))
+            ossz = ossz + tomb[i];
+    }
+    return ossz;
+}
+
 int main()
 {
     srand(time(0));
@@ -181,5 +220,8 @@ int main()
     kiirParos(tomb, n);
     cout <<"paratlanok szama: " << paratlanokSzama(tomb, n) << endl;
     cout <<"primek szama: " << primekSzama(tomb, n) << endl;
+    cout <<"teljes negyzetek osszege: " << teljesNegyzetOssz(tomb, n) << endl;
+    cout <<"legkisebb elem indexe: " << minIndex(tomb, n) << endl;
+    cout <<"legnagyobb elem indexe: " << maxIndex(tomb, n) << endl;
     return 0;
 }
