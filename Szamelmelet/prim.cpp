@@ -4,7 +4,7 @@ using namespace std;
 
 bool prim(int szam)
 {
-    for(int oszto = 2; oszto * oszto <=szam; oszto++)
+    for(int oszto = 2; oszto * oszto <= szam; oszto++)
     {
         if(szam % oszto == 0)
             return false;
