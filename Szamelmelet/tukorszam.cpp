@@ -24,7 +24,7 @@ bool tukorszam (int szam)
 int main()
 {
     cout << "Tukorszamok: " << endl;
-    for(int i=0; i < 1000; i++)
+    for(int i = 0; i < 1000; i++)
     {
         if (tukorszam(i))
             cout << i << endl;
