@@ -51,8 +51,7 @@ int particio(int tomb[], int also, int felso)
 
 void quickSort(int tomb[], int also, int felso)
 {
-    if(also >= felso)
-        return;
+    if(also >= felso) return;
     int index = particio(tomb, also, felso);
     quickSort(tomb, also, index);
     quickSort(tomb, index + 1, felso);
